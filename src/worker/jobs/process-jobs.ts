@@ -1,0 +1,18 @@
+import { JobType, type Job } from "../../types/jobs.types";
+import { processEmail } from "./email-job";
+import { generateReport } from "./generate-report";
+import { processImage } from "./process-image";
+
+export async function processJobs(job: Job) {
+  switch (job.type) {
+    case JobType.SEND_EMAIL:
+      await processEmail(job.payload);
+      break;
+    case JobType.GENERATE_REPORT:
+      await generateReport(job.payload);
+      break;
+    case JobType.PROCESS_IMAGE:
+      await processImage(job.payload);
+      break;
+  }
+}
