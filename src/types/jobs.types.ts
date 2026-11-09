@@ -6,7 +6,7 @@ export interface Job {
 }
 
 export enum JobType {
-  SEND_EMAIL,
-  GENERATE_REPORT,
-  PROCESS_IMAGE,
+  SEND_EMAIL = "SEND_EMAIL",
+  GENERATE_REPORT = "GENERATE_REPORT",
+  PROCESS_IMAGE = "PROCESS_IMAGE",
 }
