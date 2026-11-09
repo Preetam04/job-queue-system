@@ -9,5 +9,19 @@ services:
       - redisdata:/data
     restart: unless-stopped
 
+  # api:
+  #   build: .
+  #   command: bun run dev:api
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - redis
+
+  # worker:
+  #   build: .
+  #   command: bun run dev:worker
+  #   depends_on:
+  #     - redis
+
 volumes:
   redisdata:

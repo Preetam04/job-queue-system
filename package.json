@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch src/index.ts",
+    "dev:api": "bun --watch src/index.ts",
+    "dev:worker": "bun --watch src/worker/worker.ts",
     "start": "NODE_ENV=production bun src/index.ts",
     "build": ""
   },
